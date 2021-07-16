@@ -21,6 +21,7 @@ fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red', linewidth=1)
 ax.plot(dates, lows, c='blue', linewidth=1)
 
+# fill space between 2 y-values (highs and lows)
 plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 plt.title("Daily high temperatures, 2018", fontsize=24)

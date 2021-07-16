@@ -15,13 +15,13 @@ for i in range(1, die.sides+1):
 	frequencies[i-1] = results.count(i)
 
 x_values = list(range(1, die.sides+1))
-data = [Bar(x=x_values, y=frequencies)]
+data = [Bar(x=x_values, y=frequencies)] # histogram bars
 
 x_axis_config = {'title': 'Result'}
 y_axis_config = {'title': 'Frequency of Result'}
 
 my_layout = Layout(title=f'Result of rolling d{die.sides} {num_rolls} times',
-	xaxis=x_axis_config, yaxis=y_axis_config)
+	xaxis=x_axis_config, yaxis=y_axis_config) # layout settings
 
 offline.plot({'data': data, 'layout': my_layout}, filename='d6.html')
 

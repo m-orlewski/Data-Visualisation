@@ -9,8 +9,8 @@ with open(filename) as f:
 
 readable_file = 'data/readable_eq_data.json'
 with open(readable_file, 'w') as f:
-	json.dump(all_eq_data, f, indent=4)
 	# json data object to file (readable format)
+	json.dump(all_eq_data, f, indent=4)
 
 all_eq_dicts = all_eq_data['features']
 
@@ -39,7 +39,7 @@ data = [{
 		},
 		}] # Scattergeo object
 
-my_layout = Layout(title='Global Earthquakes')
+my_layout = Layout(title='Global Earthquakes') #layout settings
 
 fig = {'data': data, 'layout': my_layout}
 offline.plot(fig, filename='global_eartquakes.html')

@@ -14,6 +14,7 @@ ax.scatter(rw.x, rw.y, s=5, c=point_numbers, cmap=plt.cm.magma, edgecolors='none
 ax.scatter(0, 0, s=25, c='green', edgecolors='none')
 ax.scatter(rw.x[-1], rw.y[-1], s=25, c='green', edgecolors='none')
 
+# set axis visibility
 ax.get_xaxis().set_visible(False)
 ax.get_yaxis().set_visible(False)
 

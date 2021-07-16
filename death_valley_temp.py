@@ -9,6 +9,7 @@ with open(filename, 'r') as f:
 
 	dates, highs, lows = [], [], []
 	for row in reader:
+		#str to datetime object in specified format
 		current_date = datetime.strptime(row[2], '%Y-%m-%d')
 		try:
 			high = int(row[5])
@@ -20,11 +21,12 @@ with open(filename, 'r') as f:
 			highs.append(high)
 			lows.append(low)
 
-plt.style.use('seaborn')
+plt.style.use('seaborn') # plot style
 fig, ax = plt.subplots()
 ax.plot(dates, highs, c='red', linewidth=1)
 ax.plot(dates, lows, c='blue', linewidth=1)
 
+# fill space between to y-values
 plt.fill_between(dates, highs, lows, facecolor='blue', alpha=0.1)
 
 plt.title("Daily high temperatures, 2018", fontsize=24)
